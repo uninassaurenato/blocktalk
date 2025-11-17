@@ -1,5 +1,7 @@
-@extends ("layout.Index")
+@extends ("layout.indexlay")
+@include ("recursos.header")
+@include ("css.indexcss")
 
 @section ("teste")
-    <h1> Essa é a tela inicial. </h1>
+    <h1> Isso é um teste, Index. </h1>
 @endsection
