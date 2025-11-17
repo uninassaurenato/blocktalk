@@ -7,32 +7,32 @@
 
             @media only screen and (min-width: 300px) {
                 --vw: 400px;
-                --vh: 800px;
+                --vh: 500px;
             }
 
             @media only screen and (min-width: 500px) {
                 --vw: 500px;
-                --vh: 700px;
+                --vh: 650px;
             }
 
             @media only screen and (min-width: 800px) {
                 --vw: 600px;
-                --vh: 600px;
+                --vh: 900px;
             }
 
             @media only screen and (min-width: 1000px) {
                 --vw: 700px;
-                --vh: 600px;
+                --vh: 1200px;
             }
 
             @media only screen and (min-width: 1200px) {
                 --vw: 900px;
-                --vh: 700px;
+                --vh: 1400px;
             }
 
             @media only screen and (min-width: 1400px) {
                 --vw: 1000px;
-                --vh: 800px;
+                --vh: 1600px;
             }
 
             --cor1: #FFFFFF; /* << branco */
@@ -40,7 +40,7 @@
             --cor3: #593d3b; /* << marrom escuro */
             --cor4: #000000; /* << preto */
 
-            --fontsize: calc(var(--vw)/25); /* << Tamanho das fontes */
+            --fontsize: calc(var(--vh)/25); /* << Tamanho das fontes */
             --fontspace: auto; /* << Espaço entre as letras */
             --linespace: auto; /* << Espaço entre as linhas */
         }
