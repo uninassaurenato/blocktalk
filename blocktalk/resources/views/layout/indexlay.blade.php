@@ -6,6 +6,8 @@
 </head>
 <body>
     @yield("header")
-    @yield("teste")
+    @yield("comment")
+    @yield("title")
 </body>
+@yield("js")
 </html>

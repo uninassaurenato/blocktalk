@@ -4,45 +4,17 @@
         /* :root define variáveis que vão ser editadas pelo javaScript :-3 favor não mexer!! */
         
         :root { 
-
-            @media only screen and (min-width: 300px) {
-                --vw: 400px;
-                --vh: 500px;
-            }
-
-            @media only screen and (min-width: 500px) {
-                --vw: 500px;
-                --vh: 650px;
-            }
-
-            @media only screen and (min-width: 800px) {
-                --vw: 600px;
-                --vh: 900px;
-            }
-
-            @media only screen and (min-width: 1000px) {
-                --vw: 700px;
-                --vh: 1200px;
-            }
-
-            @media only screen and (min-width: 1200px) {
-                --vw: 900px;
-                --vh: 1400px;
-            }
-
-            @media only screen and (min-width: 1400px) {
-                --vw: 1000px;
-                --vh: 1600px;
-            }
+            --vh: 3px;
+            --vw: 3px;
 
             --cor1: #FFFFFF; /* << branco */
             --cor2: #ab947e; /* << marrom claro */
             --cor3: #593d3b; /* << marrom escuro */
             --cor4: #000000; /* << preto */
 
-            --fontsize: calc(var(--vh)/25); /* << Tamanho das fontes */
-            --fontspace: auto; /* << Espaço entre as letras */
-            --linespace: auto; /* << Espaço entre as linhas */
+            --fontsize: calc(var(--vh)/2.3); /* << Tamanho das fontes */
+            --fontspace: calc(var(--vw)/90); /* << Espaço entre as letras */
+            --linespace: calc(var(--vh)/1.8); /* << Espaço entre as linhas */
         }
 
         /* O resto é só um css comum!! apenas não deixe os valores fora da tag style ;-3 */
@@ -56,7 +28,9 @@
             margin: 0px;
             padding: 0px;
             font-family: arial;
-            font-size: var(--fontsize)
+            font-size: var(--fontsize);
+            letter-spacing: var(--fontspace);
+            line-height: var(--linespace);
         }
 
         body {
@@ -64,6 +38,7 @@
         }
 
         .header {
+            padding: calc(var(--vh)/8);
             background-color: var(--cor3);
             color: var(--cor1);
             font-size: var(--fontsize);
@@ -74,14 +49,15 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                gap: calc(var(--vw)/60)
             }
             .header-buttons {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: calc(var(--vw)/90);
+                gap: calc(var(--vw)/6);
                 :last-child {
-                    margin-right: calc(var(--vw)/100)
+                    margin-right: calc(var(--vw)/20)
                 }
             }            
             .button {
@@ -104,7 +80,22 @@
 
         .menu {
             display: none;
-            position: absolute;
+            height: calc(var(--vh)*1.3);
+            position: fixed;
+            z-index: 2;
+            background-color: red;
+        }
+
+        #comment {
+            background-color: var(--cor2);
+            color: var(--cor1);
+            font-size: calc(var(--fontsize)/1.3);
+            padding: calc(var(--vh)/20);
+            padding-left: calc(var(--vw)/10);
+            margin-bottom: calc(var(--vh)/4);
+        }
+        :not(.header,.header *) {
+            color: var(--cor3);
         }
 
     </style>

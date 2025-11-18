@@ -5,5 +5,7 @@
 </head>
 <body>
     @yield("header")
+    @yield("comment")
 </body>
+@yield("js")
 </html>

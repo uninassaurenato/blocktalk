@@ -1,5 +1,6 @@
 @include ("recursos.menu")
 @include ("recursos.head")
+@include ("js.js")
 @include ("css.css")
 @yield("css")
 @section ("header")
@@ -28,6 +29,6 @@
                 <h1>CONTA</h1>
             </div>
         </div>
-        @yield("menu")
     </div>
+    @yield("menu")
 @endsection
