@@ -33,6 +33,15 @@
             <div class="model">
                 <h1> Modelo 1 </h1>
             </div>
+            <div class="model">
+                <h1> Modelo 1 </h1>
+            </div>
+            <div class="model">
+                <h1> Modelo 1 </h1>
+            </div>
+            <div class="model">
+                <h1> Modelo 1 </h1>
+            </div>
         </div>        
     </div>
 @endsection

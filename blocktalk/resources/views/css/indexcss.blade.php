@@ -9,17 +9,21 @@
             flex-flow: column;
             :not(.templates, .templates *) {
                 margin: calc(var(--vw)/5);
+                margin-bottom: calc(var(--vh)/1.5);
                 font-size: calc(var(--fontsize)*1.4);
             }
             .templates {
                 display: flex;
                 flex-flow: row wrap;
-                justify-content: center;
+                justify-content: space-around;
                 margin: auto;
                 border: calc(var(--vw)/20) solid var(--cor3);
-                width: calc(var(--vw)*9);
+                width: calc(var(--vw)*7.4);
                 border-radius: 60px;
                 background-color: var(--cor2);
+                :last-child {
+                    margin-left: auto !important ;
+                }
                 .model {
                     display: flex;
                     align-items: center;

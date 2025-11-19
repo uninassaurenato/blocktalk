@@ -12,8 +12,8 @@
             --cor3: #593d3b; /* << marrom escuro */
             --cor4: #000000; /* << preto */
 
-            --fontsize: calc(var(--vh)/2.3); /* << Tamanho das fontes */
-            --fontspace: calc(var(--vw)/90); /* << Espaço entre as letras */
+            --fontsize: auto; /* << Tamanho das fontes */
+            --fontspace: calc(var(--vw)/100); /* << Espaço entre as letras */
             --linespace: calc(var(--vh)/1.8); /* << Espaço entre as linhas */
         }
 
@@ -31,6 +31,7 @@
             font-size: var(--fontsize);
             letter-spacing: var(--fontspace);
             line-height: var(--linespace);
+            color: var(--cor3);
         }
 
         body {
@@ -40,11 +41,13 @@
         .header {
             padding: calc(var(--vh)/8);
             background-color: var(--cor3);
-            color: var(--cor1);
             font-size: var(--fontsize);
             display: flex;
             align-items: center;
             justify-content: space-between;
+            * {
+                color: var(--cor1);
+            }
             .menu-icon {
                 display: flex;
                 align-items: center;
@@ -79,11 +82,51 @@
         }
 
         .menu {
-            display: none;
-            height: calc(var(--vh)*1.3);
+            height: 100%;
             position: fixed;
-            z-index: 2;
-            background-color: red;
+            background-color: var(--cor3);
+            top: 0px;
+            left: calc(-3*(var(--vw)));
+            width: 30%;
+            * {
+                color: var(--cor1);
+            }
+            #menu-title {
+                display: flex;
+                justify-content: space-between;
+                margin: calc(var(--vh)/4);
+                #menu-close {
+                    font-size: calc(var(--fontsize)*1.3);
+                    cursor: pointer;
+                }
+            }
+            .ranges {
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                label {
+                    font-size: calc(var(--fontsize)/1.6);
+                    display: flex;
+                    justify-content: space-between;
+                }
+                input {
+                    -webkit-appearance: none; 
+                    appearance: none;
+                    outline: none;
+                }
+                .custom-slot {
+                    margin-bottom: calc(var(--vh)/2);
+                }
+            }
+            .toggle {
+                display: flex;
+                justify-content: right;
+                * {
+                    font-size: calc(var(--fontsize)*2);
+                    margin-right: calc(var(--vw)/6);
+                    cursor: pointer;
+                }
+            }
         }
 
         #comment {
@@ -93,9 +136,6 @@
             padding: calc(var(--vh)/20);
             padding-left: calc(var(--vw)/10);
             margin-bottom: calc(var(--vh)/4);
-        }
-        :not(.header,.header *) {
-            color: var(--cor3);
         }
 
     </style>
