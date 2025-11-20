@@ -1,3 +1,4 @@
+@include ("recursos.account")
 @section ("js")
     <script>
 
@@ -46,11 +47,29 @@
         }
         updateViewportUnits()
         updateMenuUnits()
+
         document.getElementById("menu-opener").addEventListener("click",function () {
             document.getElementById("menu").style.left = "auto";
         })
         document.getElementById("menu-close").addEventListener("click",function () {
             document.getElementById("menu").style.left = "calc(-3*(var(--vw)))";
+        })
+        document.getElementById("guia-button").addEventListener("click", function () {
+            window.location.href = "https://animated-waddle-5gv4r77x7vwwcvx97-8000.app.github.dev/guide"
+        })
+        document.getElementById("logo").addEventListener("click", function () {
+            window.location.href = "https://animated-waddle-5gv4r77x7vwwcvx97-8000.app.github.dev/"
+        })
+        document.getElementById("conta-button").addEventListener("click", function () {
+            document.getElementById("account").style.display = "flex";
+        })
+        document.getElementById("account-close").addEventListener("click", function (){
+            document.getElementById("account").style.display = "none";
+        })
+        document.querySelectorAll(".model").forEach(function (child) {
+            child.addEventListener("click", function () {
+                window.location.href = "https://animated-waddle-5gv4r77x7vwwcvx97-8000.app.github.dev/tool "
+            })
         })
 
         // código está bugado v

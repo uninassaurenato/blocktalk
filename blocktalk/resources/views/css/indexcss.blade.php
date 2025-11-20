@@ -25,6 +25,7 @@
                     margin-left: auto !important ;
                 }
                 .model {
+                    cursor: pointer;
                     display: flex;
                     align-items: center;
                     justify-content: center;

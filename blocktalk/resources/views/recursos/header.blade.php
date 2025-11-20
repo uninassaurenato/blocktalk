@@ -1,3 +1,4 @@
+@include ("recursos.account")
 @include ("recursos.menu")
 @include ("recursos.head")
 @include ("js.js")
@@ -5,6 +6,7 @@
 @yield("css")
 @section ("header")
     @yield("head")
+    @yield("account")
     <div class="header">
         <div class="menu-icon">
             <span class="material-symbols-rounded" id="menu-opener">

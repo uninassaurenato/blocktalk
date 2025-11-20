@@ -138,5 +138,54 @@
             margin-bottom: calc(var(--vh)/4);
         }
 
+        .account {
+            #account-close {
+                display: flex;
+                justify-content: end;
+                cursor: pointer;
+            }
+            display: none;
+            position: absolute;
+            flex-flow: column;
+            background-color: var(--cor2);
+            padding: calc(var(--vw)/10);
+            border-radius: 30px;
+            border: calc(var(--vw)/20) solid var(--cor3);
+            left: 68%;
+            top: 10%;
+            .account-input {
+                width: 70%;
+                border-radius: 20px;
+                border: none;
+                margin: calc(var(--vh)/10);
+                padding: calc(var(--vw)/20);
+                padding-bottom: 0px;
+                padding-top: 0px;
+            }
+            input::placeholder {
+                color: var(--cor3);
+                font-size: 60%;
+                font-weight: bolder;
+            }
+            .account-hotbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: calc(var(--fontsize)*1.5);
+                button {
+                    cursor: pointer;
+                    letter-spacing: calc(var(--fontspace)/2);
+                    background-color: var(--cor3);
+                    border: none;
+                    color: var(--cor2);
+                    padding: calc(var(--vw)/15);
+                    padding-bottom: 0px;
+                    padding-top: 0px;
+                    border-radius: 15px;
+                    font-size: calc(var(--fontsize)/1.5)
+                }
+            }
+        }
+
     </style>
 @endsection
