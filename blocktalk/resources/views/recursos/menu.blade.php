@@ -4,11 +4,11 @@
         <div class="ranges">
             <div class="custom-slot">
                 <label for="font-size"> Tamanho do texto: <h1 id="px-font-size"></h1></label>
-                <input type="range" name="font-size" id="font-size" class="custom-range" max="30">
+                <input type="range" name="font-size" id="font-size" class="custom-range" max="50" min="20">
             </div>
             <div class="custom-slot">
                 <label for="font-space"> Espaçamento do texto: <h1 id="px-font-space"></h1></label>
-                <input type="range" name="font-space" id="font-space" class="custom-range">
+                <input type="range" name="font-space" id="font-space" class="custom-range" max="100" min="1">
             </div>
             <div class="custom-slot">
                 <label for="line-space"> Espaçamento das linhas: <h1 id="px-line-space"></h1></label>

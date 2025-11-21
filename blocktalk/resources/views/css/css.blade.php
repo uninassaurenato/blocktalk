@@ -4,17 +4,40 @@
         /* :root define variáveis que vão ser editadas pelo javaScript :-3 favor não mexer!! */
         
         :root { 
-            --vh: 3px;
-            --vw: 3px;
+
+            @media only screen and (min-width: 300px) {
+                --vh: 600px;
+                --vw: 400px;
+            }
+            @media only screen and (min-width: 600px) {
+                --vh: 500px;
+                --vw: 600px;
+            }
+            @media only screen and (min-width: 900px) {
+                --vh: 400px;
+                --vw: 800px;
+            }
+            @media only screen and (min-width: 1200px) {
+                --vh: 400px;
+                --vw: 900px;
+            }
+            @media only screen and (min-width: 1500px) {
+                --vh: 400px;
+                --vw: 1000px;
+            }
+
 
             --cor1: #FFFFFF; /* << branco */
             --cor2: #ab947e; /* << marrom claro */
             --cor3: #593d3b; /* << marrom escuro */
             --cor4: #000000; /* << preto */
 
-            --fontsize: auto; /* << Tamanho das fontes */
-            --fontspace: calc(var(--vw)/100); /* << Espaço entre as letras */
-            --linespace: calc(var(--vh)/1.8); /* << Espaço entre as linhas */
+            --fontsize: calc(var(--vw)/30); /* << Tamanho das fontes */
+            --fontsizem: calc(var(--vw)/30);
+            --fontspacem: calc(var(--fontsizem)/30);
+            --linespacem: var(--fontsizem);
+            --fontspace: calc(var(--fontsize)/200); /* << Espaço entre as letras */
+            --linespace: calc(var(--fontsize)); /* << Espaço entre as linhas */
         }
 
         /* O resto é só um css comum!! apenas não deixe os valores fora da tag style ;-3 */
@@ -39,7 +62,7 @@
         }
 
         .header {
-            padding: calc(var(--vh)/8);
+            padding: calc(var(--vh)/30);
             background-color: var(--cor3);
             font-size: var(--fontsize);
             display: flex;
@@ -52,15 +75,15 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: calc(var(--vw)/60)
+                gap: calc(var(--vw)/100)
             }
             .header-buttons {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: calc(var(--vw)/6);
+                gap: calc(var(--vw)/20);
                 :last-child {
-                    margin-right: calc(var(--vw)/20)
+                    margin-right: calc(var(--vw)/40)
                 }
             }            
             .button {
@@ -82,6 +105,13 @@
         }
 
         .menu {
+            display: flex;
+            align-items: flex-start;
+            align-content: flex-start;
+            flex-flow: column;
+            letter-spacing: var(--fontspacem);
+            line-height: var(--linespacem);
+            font-size: var(--fontsizem);
             height: 100%;
             position: fixed;
             background-color: var(--cor3);
@@ -89,14 +119,20 @@
             left: calc(-3*(var(--vw)));
             width: 30%;
             * {
+                font-size: var(--fontsizem);
                 color: var(--cor1);
+                letter-spacing: var(--fontspacem);
+                line-height: var(--linespacem);
             }
             #menu-title {
                 display: flex;
                 justify-content: space-between;
-                margin: calc(var(--vh)/4);
+                margin: calc(var(--vh)/20);
+                width: 90%;
+                letter-spacing: var(--fontspacem);
+                line-height: var(--linespacem);
                 #menu-close {
-                    font-size: calc(var(--fontsize)*1.3);
+                    font-size: calc(var(--fontsizem)*1.2);
                     cursor: pointer;
                 }
             }
@@ -104,27 +140,47 @@
                 display: flex;
                 flex-flow: column wrap;
                 align-items: center;
+                width: 100%;
+                letter-spacing: var(--fontspacem);
+                line-height: var(--linespacem);
                 label {
-                    font-size: calc(var(--fontsize)/1.6);
+                    letter-spacing: var(--fontspacem);
+                    line-height: var(--linespacem);
+                    font-size: calc(var(--fontsizem)/1.4);
                     display: flex;
                     justify-content: space-between;
+                    margin: calc(var(--vh)/30);
+                    h1 {
+                        letter-spacing: var(--fontspacem);
+                        line-height: var(--linespacem);
+                        font-size: inherit;
+                    }
                 }
                 input {
+                    letter-spacing: var(--fontspacem);
+                    line-height: var(--linespacem);
                     -webkit-appearance: none; 
                     appearance: none;
                     outline: none;
                 }
                 .custom-slot {
-                    margin-bottom: calc(var(--vh)/2);
+                    letter-spacing: var(--fontspacem);
+                    line-height: var(--linespacem);
+                    margin-bottom: calc(var(--vh)/20);
                 }
             }
             .toggle {
+                letter-spacing: var(--fontspacem);
+                line-height: var(--linespacem);
                 display: flex;
                 justify-content: right;
+                width: 100%;
                 * {
-                    font-size: calc(var(--fontsize)*2);
-                    margin-right: calc(var(--vw)/6);
+                    font-size: calc(var(--fontsizem)*1.5);
+                    margin-right: calc(var(--vw)/30);
                     cursor: pointer;
+                    letter-spacing: var(--fontspacem);
+                    line-height: var(--linespacem);
                 }
             }
         }
@@ -132,10 +188,10 @@
         #comment {
             background-color: var(--cor2);
             color: var(--cor1);
-            font-size: calc(var(--fontsize)/1.3);
-            padding: calc(var(--vh)/20);
-            padding-left: calc(var(--vw)/10);
-            margin-bottom: calc(var(--vh)/4);
+            font-size: calc(var(--fontsize)/1.8);
+            padding: calc(var(--vh)/30);
+            padding-left: calc(var(--vw)/40);
+            margin-bottom: calc(var(--vh)/20);
         }
 
         .account {
@@ -148,17 +204,17 @@
             position: absolute;
             flex-flow: column;
             background-color: var(--cor2);
-            padding: calc(var(--vw)/10);
+            padding: calc(var(--vw)/50);
             border-radius: 30px;
-            border: calc(var(--vw)/20) solid var(--cor3);
-            left: 68%;
-            top: 10%;
+            border: calc(var(--vw)/100) solid var(--cor3);
+            left: 64%;
+            top: 12%;
             .account-input {
                 width: 70%;
                 border-radius: 20px;
                 border: none;
-                margin: calc(var(--vh)/10);
-                padding: calc(var(--vw)/20);
+                margin: calc(var(--vh)/50);
+                padding: calc(var(--vw)/40);
                 padding-bottom: 0px;
                 padding-top: 0px;
             }
@@ -168,6 +224,7 @@
                 font-weight: bolder;
             }
             .account-hotbar {
+                margin-top: calc(var(--vh)/50);
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -178,7 +235,7 @@
                     background-color: var(--cor3);
                     border: none;
                     color: var(--cor2);
-                    padding: calc(var(--vw)/15);
+                    padding: calc(var(--vw)/30);
                     padding-bottom: 0px;
                     padding-top: 0px;
                     border-radius: 15px;
