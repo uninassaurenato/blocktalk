@@ -11,27 +11,23 @@
     <div class="tool">
         <div class="container-painel">
             <h1> CAMPOS </h1>
+            
             <div class="scroll-painel">
-                <h3>PAINEL 1</h3>
-                <h3>PAINEL 2</h3>
-                <h3>PAINEL 3</h3>
-                <h3>PAINEL 4</h3>
-                <h3>PAINEL 5</h3>
-                <h3>PAINEL 6</h3>
+                @foreach ($paineis as $p)
+                    <a href="{{ route('painel.show', $p->id) }}">
+                        <h3>{{ $p->nome }}</h3>
+                    </a>    
+                @endforeach
             </div>
+            
             <div class="scroll-campo">
-                <div class="campo">CAMPO 1</div>
-                <div class="campo">CAMPO 1</div>
-                <div class="campo">CAMPO 1</div>
-                <div class="campo">CAMPO 1</div>
-                <div class="campo">CAMPO 1</div>
-                <div class="campo">CAMPO 1</div>
-                <div class="campo">CAMPO 1</div>
-                <div class="campo">CAMPO 1</div>
-                <div class="campo">CAMPO 1</div>
-                <div class="campo">CAMPO 1</div>
-                <div class="campo">CAMPO 1</div>
-                <div class="campo">CAMPO 1</div>
+                @if (count($campos) == 0)
+                    <p>selecione um painel</p>
+                @else
+                    @foreach ($campos as $c)
+                        <h3>{{ $c->nome }}</h3>
+                    @endforeach
+                @endif
             </div>
         </div>
         <div class="container-tool">

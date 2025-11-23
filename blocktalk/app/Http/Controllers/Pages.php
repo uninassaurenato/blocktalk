@@ -17,4 +17,8 @@ class Pages extends Controller
     public function tool() {
         return view("Tool");
     }
+
+    public function cadastro() {
+        return view("Cadastro");
+    }
 }
