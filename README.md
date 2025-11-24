@@ -8,6 +8,10 @@
 
 O projeto tem como destino trazer acessibilidade para pessoas que têm algum tipo de neurodivergência, trazendo facilidade e praticidade ao público alvo no ambiente de criação de e-mails, cartas, currículos, convites de aniversário...
 
+## 📋 Por quê usar?
+
+ Planejamos introduzir uma experiência mais intuitiva para pessoas com dislexia ou outras neurodivergencias que ocasionem dificuldade na escrita e na leitura. BlockTalk deseja ser apenas uma ferramenta, tal como se usaria o corretor ortográfico. 
+
 ## 🚀 Tecnologias Utilizadas
 
 <div align="center">
